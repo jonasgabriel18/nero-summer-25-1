@@ -58,7 +58,7 @@ def get_serper_results(queries: List[str],
     search = GoogleSerperAPIWrapper(gl=gl,
                                     hl=hl,
                                     k=k, 
-                                    type=type_content) # type: Literal['news', 'search', 'places', 'images'] = 'search'
+                                    type=type_content)
     
     results = [search.results(query) for query in queries]
     return results
